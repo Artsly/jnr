@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JNR</title>
+    <style>
+        #display {
+            width: 300px;
+            height: 300px;
+            border: 1px solid #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div id="display"></div>
+    <button onclick="displayRandomObject()">Display Random Object</button>
+
+    <script>
+        var objects = [
+            "Object 1",
+            "Object 2",
+            "Object 3",
+            "Object 4",
+            "Object 5"
+        ];
+
+        function displayRandomObject() {
+            var displayElement = document.getElementById("display");
+            var randomIndex = Math.floor(Math.random() * objects.length);
+            displayElement.textContent = objects[randomIndex];
+        }
+    </script>
+</body>
+</html>
